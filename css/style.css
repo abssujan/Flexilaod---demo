@@ -7,3 +7,14 @@
     box-sizing: border-box;
     font-family: "Caveat", cursive;
 }
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.header h1 {
+    font-size: 48px;
+    font-weight: 400;
+    border-bottom: 2px dashed gray;
+}
