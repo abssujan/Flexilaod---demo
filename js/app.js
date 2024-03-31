@@ -9,6 +9,8 @@ const months = ["January","February","March","April","May","June","July","August
 let lists = JSON.parse(localStorage.getItem('list') || '[]')
 
 function showList(){
+    showListBox.innerHTML = '';
+
     lists.forEach(list =>{
         let listDiv = `
         <div class="values">
@@ -24,7 +26,7 @@ function showList(){
         </div>
 
         `;
-        showListBox.insertAdjacentHTML('afterend', listDiv)
+        showListBox.insertAdjacentHTML('beforeend', listDiv);
     })
 }
 showList()
@@ -44,6 +46,9 @@ submitBtn.addEventListener('click', function(){
         }
         lists.push(listInformation);
         // saving local storage
-        localStorage.setItem("list", JSON.stringify(lists))
+        localStorage.setItem("list", JSON.stringify(lists));
+        numberInputField.value = '';
+        ammountInputField.value = '';
     }
+    showList()
 })
