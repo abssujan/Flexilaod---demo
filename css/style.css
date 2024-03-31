@@ -96,3 +96,13 @@
     text-align: center;
     margin-top: 1rem;
 }
+
+.icons i {
+    font-size: 20px;
+    color: #575757;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.icons i:hover {
+    color: red;
+}

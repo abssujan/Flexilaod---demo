@@ -18,7 +18,11 @@ function showList(){
         <div class="value"><span>${list.number}</span></div>
         <!-- Ammount -->
         <div class="value"><span>${list.ammount}</span></div>
+        <div class="icons">
+        <i class="fa-solid fa-delete-left"></i>
         </div>
+        </div>
+
         `;
         showListBox.insertAdjacentHTML('afterend', listDiv)
     })
